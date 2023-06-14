@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+    <title>登录网站</title>
+    <script>
+        function login() {
+            // 跳转到登录页面
+            window.location.href = "/user/login";
+        }
+        function register() {
+            // 跳转到注册页面
+            window.location.href = "/page/register";
+        }
+    </script>
+</head>
+<body>
+<form class="login">
+    <p>WeatherSearchSystem</p>
+    <input type="text" placeholder="用户名" >
+    <input type="password" placeholder="密码">
+    <input type="button" class="btn" value="登录" onclick="login()">
+    <input type="button" class="btn" value="注册" onclick="register()">
+</form>
+</body>
+</html>
