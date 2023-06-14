@@ -1,5 +1,5 @@
 package com.example.weather.service;
 
 public interface dojson {
-    String getJSON(String city);
+    String dealJSON(String city);//接口实现处理JSON
 }
