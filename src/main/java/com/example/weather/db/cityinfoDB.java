@@ -2,7 +2,7 @@ package com.example.weather.db;
 import java.sql.*;
 public class cityinfoDB {
     static Connection conn;
-    public static String addcityinfo(String cityname, int cityno) throws SQLException {
+    public  String addcityinfo(String cityname, int cityno) throws SQLException {
         String sql = "INSERT INTO cityinfo (Cityname, Cityno) VALUES (?,?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, cityname);
@@ -11,7 +11,7 @@ public class cityinfoDB {
         return "add city successfully";
     }
 
-    public static String deletecityinfo(int cityno) throws SQLException {
+    public  String deletecityinfo(int cityno) throws SQLException {
         String sql = "DELETE FROM cityinfo WHERE Cityno = ?";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setInt(1, cityno);
@@ -19,7 +19,7 @@ public class cityinfoDB {
         return "delete city successfully";
     }
 
-    public static String modifycityinfo(int cityno,String cityname) throws SQLException{
+    public  String modifycityinfo(int cityno,String cityname) throws SQLException{
         String sql = "UPDATE cityinfo SET Cityname = ? WHERE Cityno = ?";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, cityname);
@@ -28,7 +28,7 @@ public class cityinfoDB {
         return "modify city successfully";
     }
 
-    public static String searchcityinfo(int cityno) throws SQLException{
+    public  String searchcityinfo(int cityno) throws SQLException{
         String sql = "SELECT * FROM cityinfo WHERE Cityno = ?";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setInt(1,cityno);

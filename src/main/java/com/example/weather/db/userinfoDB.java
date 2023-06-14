@@ -13,7 +13,7 @@ public class userinfoDB {
         System.out.println("Connect to DB successfully");
     }
 
-    public static String registerUserinfo(int UserID, String Nickname,String Password,String Location,String VIP)
+    public String registerUserinfo(int UserID, String Nickname,String Password,String Location,String VIP)
             throws ClassNotFoundException, SQLException {
         String sql = "INSERT INTO userinfo (UserID, Nickname, Password, Location, VIP) VALUES(?,?,?,?,?)";
         PreparedStatement stmt = conn.prepareStatement(sql);
@@ -26,7 +26,7 @@ public class userinfoDB {
         return "register user successfully";
     }
 
-    public static String deleteUserinfo(int UserID) throws SQLException {
+    public String deleteUserinfo(int UserID) throws SQLException {
         String sql = "DELETE FROM userinfo WHERE UserID = ?";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setInt(1, UserID);
@@ -34,7 +34,7 @@ public class userinfoDB {
         return "delete user successfully";
     }
 
-    public static String modifyUserinfo(int UserID, String Nickname,String Password,String Location)
+    public String modifyUserinfo(int UserID, String Nickname,String Password,String Location)
             throws SQLException {
         String sql = "UPDATE userinfo SET Nickname = ?,Password = ?,Location=? WHERE UserID = ?";
         PreparedStatement stmt = conn.prepareStatement(sql);
@@ -46,7 +46,7 @@ public class userinfoDB {
         return "modify user successfully";
     }
 
-    public static String searchUserinfo(int UserID) throws SQLException {
+    public String searchUserinfo(int UserID) throws SQLException {
         String sql ="SELECT * FROM userinfo WHERE UserID = ?";
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setInt(1, UserID);
