@@ -2,16 +2,6 @@ package com.example.weather.db;
 import java.sql.*;
 public class userinfoDB {
     static Connection conn;
-    public static void connect() throws ClassNotFoundException, SQLException {
-        Connection conn;
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        String url ="jdbc:mysql://localhost:3306/" +
-                "weathersearchsystem?useUnicode=true&characterEncoding=utf8&&useSSL=false";
-        String user = "root";
-        String password = "pgy040427";
-        conn = DriverManager.getConnection(url, user, password);
-        System.out.println("Connect to DB successfully");
-    }
 
     public String registerUserinfo(int UserID, String Nickname,String Password,String Location,String VIP)
             throws ClassNotFoundException, SQLException {
