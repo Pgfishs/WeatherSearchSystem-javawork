@@ -1,24 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" th:href="@{/css/register.css}">
+    <link rel="stylesheet" href="./css/register.css">
     <title>Register Page</title>
     <script>
-        function register(){
-            window.location.href = "/user/register"
+        function register() {
+            document.forms[0].submit();
         }
     </script>
 </head>
+
 <body class="text-center">
-<form class="register" th:action="@{/user/register}">
-    <p>请完成用户注册</p>
-    <input type="text" name ="nickname" placeholder="用户名" ></br>
-    <input type="text" name ="userid" placeholder="用户ID"></br>
-    <input type="password" name="password" placeholder="密码">
-    <input type="button" class="btn" value="确定" onclick="register()">
-</form>
+    <img src="./images/logo.png" alt="logo" class="logo">
+    <form style="text-align: center;" class="register" action="/user/register" method="post">
+        <fieldset class="sheet1">
+            <p>天气查询系统 用户注册</p>
+            <input type="text" name="nickname" placeholder="用户名"></br>
+            <input type="text" name="userid" placeholder="用户ID"></br>
+            <input type="password" name="password" placeholder="密码"><br><br>
+            <input type="button" class="btn" value="确定" onclick="register()">
+        </fieldset>
+    </form>
 </body>
+
 </html>
