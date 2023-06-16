@@ -1,7 +1,6 @@
 package com.example.weather.db;
 import java.sql.*;
 public class userandcity {
-    //TODO 用户对其账户对应的城市及信息的的增删查
     static Connection conn;
     public String userAddcity(int userid,int cityID) throws SQLException {
         String sql = "INSERT INTO user_city(UserID,CityID) VALUES(?,?)";

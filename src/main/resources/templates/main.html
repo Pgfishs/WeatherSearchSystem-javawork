@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>主页</title>
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
+<script>
+    function search(){
+        document.forms[0].submit();
+    }
+</script>
 <body>
-<a>1111</a>
+<form style="text-align: center" method="post" action="/city/search">
+    <p>输入需要查询的城市location</p>
+    <input type="text" name="city" placeholder="Search..."><br><br>
+    <input type = "button" class="btn" value="搜索" onclick="search()">
+</form>
 </body>
 </html>
