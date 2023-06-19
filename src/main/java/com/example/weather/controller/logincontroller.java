@@ -12,6 +12,10 @@ import java.sql.SQLException;
 
 @Controller
 public class logincontroller {
+    @RequestMapping("/page/login")
+    public String loginpage(){
+        return "login";
+    }
     @RequestMapping("/user/login")
     public String userlogin(@RequestParam("userinfo") String userinfo,
                             @RequestParam("password") String password,

@@ -86,8 +86,12 @@ public class userinfoDB {
         PreparedStatement stmt = conn.prepareStatement(sql);
         stmt.setString(1, nickname);
         ResultSet rs = stmt.executeQuery();
-        rs.next();
-        String p = rs.getString("Password");
-        return Objects.equals(password, p);
+        if(rs.next()){
+            String p = rs.getString("Password");
+            return Objects.equals(password, p);
+        } else {
+            return false;
+        }
     }
 }
+

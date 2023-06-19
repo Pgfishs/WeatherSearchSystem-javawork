@@ -14,6 +14,9 @@ public class cityidsearch {
     static String KEY = "17b569ad44604504924c54b2e61c86bd";
     static String locationid;
 
+    public cityidsearch(String city) {
+    }
+
     public static String getcityid(String city) {
         String _city = URLEncoder.encode(city, StandardCharsets.UTF_8);
         String URL = "https://geoapi.qweather.com/v2/city/lookup?location="+_city+"&key="+KEY+"&gzip=n";

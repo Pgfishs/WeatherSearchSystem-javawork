@@ -1,23 +1,28 @@
 body {
-    background-image:url(./static/images/bg1.jpg);
+    background-image: url(./static/images/bg6.jpg);
     background-size: cover;
 }
-.logo{
+
+.logo {
     position: absolute;
     left: 5.36%;
     top: 6.85%;
     width: 28.17%;
     height: 18.42%;
 }
-.sheet1{
+
+.sheet1 {
+    background-color: aliceblue;
+    opacity: 0.65;
     position: absolute;
-    left: 15%;
-    top: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 20px;
 }
 p{
     font-family: "阿里巴巴惠普体";
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     color: aquamarine;
     text-shadow: 1px 1px 0px black, -1px -1px 0px black, 1px -1px 0px black, -1px 1px 0px black;

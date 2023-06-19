@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>搜索页面</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/search.css">
+</head>
+<script>
+    function search() {
+        document.forms[0].submit();
+    }
+</script>
+
+<body>
+    <img src="/images/logo.png" alt="logo" class="logo">
+    <form style="text-align: center" method="post" action="/city/search">
+        <fieldset class="sheet1">
+            <p>输入需要查询的城市</p>
+            <input type="text" name="city" placeholder="输入城市名称/拼音进行搜索"><br><br>
+            <input type="button" class="btn" value="搜索" onclick="search()">
+        </fieldset>
+    </form>
+</body>
+
+</html>

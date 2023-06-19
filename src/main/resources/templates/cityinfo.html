@@ -17,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Weathering with you</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <style>
 
     </style>
@@ -28,9 +28,14 @@
     <img src="/images/main.png" alt="main" class="main">
     <img src="/images/other.png" alt="other" class="other">
     <img src="/images/warning.png" alt="warning" class="warning">
-    <a href="/search.html">
-        <img src="/images/city.png" alt="city" class="city">
-    </a>
+    <img src="/images/city.png" alt="city" class="city" onclick="tosearch()">
+
+    <script>
+        function tosearch(){
+            window.location.href="/page/search";
+        };
+
+    </script>
     <!-- <div id="data-container"></div>
     <script>
         // JavaScript 代码

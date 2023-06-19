@@ -1,0 +1,25 @@
+body {
+    background-image:url(./static/images/background.png);
+    background-size: cover;
+}
+.logo{
+    position: absolute;
+    left: 5.36%;
+    top: 6.85%;
+    width: 28.17%;
+    height: 18.42%;
+}
+.login{
+    position: absolute;
+    left: 25.36%;
+    top: 40.47%;
+    width: 20%;
+    height: 18.61%;
+}
+.register{
+    position: absolute;
+    left: 54.79%;
+    top: 40.47%;
+    width: 20%;
+    height: 18.61%;
+}

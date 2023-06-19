@@ -1,0 +1,39 @@
+body {
+    background-image:url(/static/images/background.png);
+    background-size: cover;
+}
+.logo{
+    position: absolute;
+    left: 5.36%;
+    top: 6.85%;
+    width: 28.17%;
+    height: 18.42%;
+}
+.city{
+    position: absolute;
+    left: 65.41%;
+    top: 13.11%;
+    width: 29%;
+    height: 9.81%;
+}
+.main{
+    position: absolute;
+    left: 11.49%;
+    top: 29%;
+    width: 62%;
+    height: 50.83%;
+}
+.other{
+    position: absolute;
+    left: 12.81%;
+    top: 83.14%;
+    width: 59.21%;
+    height: 12.4%;
+}
+.warning{
+    position: absolute;
+    left: 75.31%;
+    top: 29%;
+    width: 18.12%;
+    height: 49%;
+}

@@ -1,47 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Weathering with you</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
     <style>
 
     </style>
 </head>
 
 <body>
-    <img src="./images/logo.png" alt="logo" class="logo">
-    <img src="./images/main.png" alt="main" class="main">
-    <img src="./images/other.png" alt="other" class="other">
-    <img src="./images/warning.png" alt="warning" class="warning">
-    <a href="./search.html">
-        <img src="./images/city.png" alt="city" class="city">
-    </a>
-    <!-- <div id="data-container"></div>
+    <img src="/images/logo.png" alt="logo" class="logo">
+    <img src="/images/main.png" alt="main" class="main">
+    <img src="/images/other.png" alt="other" class="other">
+    <img src="/images/warning.png" alt="warning" class="warning">
+    <img src="/images/city.png" alt="city" class="city" onclick="tosearch()">
+    <h1 th:text="${message}"></h1>
     <script>
-        // JavaScript 代码
-        var apiUrl = "https://jsonplaceholder.typicode.com/todos"; // API 接口 URL
-        var dataContainer = document.getElementById("data-container");
-        // 发送 HTTP 请求
-        fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            // 处理返回的数据
-            data.forEach(item => {
-            var title = item.title;
-            var completed = item.completed;
-            var itemElement = document.createElement("div");
-            itemElement.innerHTML = "<h2>" + title + "</h2><p>已完成：" + completed + "</p>";
-            dataContainer.appendChild(itemElement);
-            });
-        })
-        .catch(error => {
-            console.error(error);
-        });
-    </script> -->
+        function tosearch(){
+            window.location.href="/page/search";
+        }
+    </script>
+
 </body>
 
 </html>
